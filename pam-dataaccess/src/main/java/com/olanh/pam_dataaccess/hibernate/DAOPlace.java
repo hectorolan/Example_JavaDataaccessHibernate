@@ -182,7 +182,7 @@ public class DAOPlace {
 				placeFromDB.setImage(place.getImage());
 				placeFromDB.setName(place.getName());
 				placeFromDB.setPhoneNumber(place.getPhoneNumber());
-				placeFromDB.setScheduleId(place.getScheduleId());
+				placeFromDB.setUserId(place.getUserId());
 				placeFromDB.setType(place.getType());
 				session.update(placeFromDB);
 				tx.commit();
