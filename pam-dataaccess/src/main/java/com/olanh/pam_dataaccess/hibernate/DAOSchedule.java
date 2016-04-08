@@ -136,6 +136,7 @@ public class DAOSchedule {
 				scheduleFromDB.setFridayClose(schedule.getFridayClose());
 				scheduleFromDB.setFridayOpen(schedule.getFridayOpen());
 				scheduleFromDB.setId(schedule.getId());
+				scheduleFromDB.setPlaceId(schedule.getPlaceId());
 				scheduleFromDB.setMondayClose(schedule.getMondayClose());
 				scheduleFromDB.setMondayOpen(schedule.getMondayOpen());
 				scheduleFromDB.setSaturdayClose(schedule.getSaturdayClose());
