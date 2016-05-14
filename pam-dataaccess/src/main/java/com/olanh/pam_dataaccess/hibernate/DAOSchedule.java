@@ -36,7 +36,6 @@ public class DAOSchedule {
 	public DAOResponseUtil<StatusAdd, Schedule>  addSchedule(Schedule schedule) {
 		DAOResponseUtil<StatusAdd, Schedule> response = new DAOResponseUtil<StatusAdd, Schedule>();
 		Long scheduleId = null;
-		long scheduleIdOffline = 2;
 		try {
 			Transaction tx = null;
 			Session session = HibernateUtil.getSession();
@@ -64,7 +63,7 @@ public class DAOSchedule {
 			response.setStatus(StatusAdd.DB_ERROR);
 		}
 		if (schedule.getId() == null) {
-			schedule.setId(scheduleIdOffline);
+			schedule.setId((long)2);
 		}
 		return response.setResponse(schedule);
 	}
