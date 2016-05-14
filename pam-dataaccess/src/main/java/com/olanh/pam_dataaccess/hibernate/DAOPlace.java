@@ -188,10 +188,10 @@ public class DAOPlace {
 				tx.commit();
 				response.setStatus(StatusUpdate.UPDATED);
 			} catch (HibernateException e) {
-				if (tx != null)
-					tx.rollback();
 				e.printStackTrace();
 				response.setStatus(StatusUpdate.DB_ERROR);
+				if (tx != null)
+					tx.rollback();
 			} finally {
 				session.close();
 			}
@@ -218,11 +218,11 @@ public class DAOPlace {
 				tx.commit();
 				response.setStatus(StatusDelete.DELETED);
 			} catch (HibernateException e) {
-				if (tx != null)
-					tx.rollback();
 				e.printStackTrace();
 				session.close();
 				response.setStatus(StatusDelete.DB_ERROR);
+				if (tx != null)
+					tx.rollback();
 			} finally {
 				session.close();
 			}
