@@ -63,7 +63,7 @@ public class DAOSchedule {
 			response.setStatus(StatusAdd.DB_ERROR);
 		}
 		if (schedule.getId() == null) {
-			schedule.setId((long)2);
+			schedule = this.offlineDBExampleObject();
 		}
 		return response.setResponse(schedule);
 	}
@@ -205,14 +205,15 @@ public class DAOSchedule {
 	
 	private Schedule offlineDBExampleObject(){
 		Schedule schedule = new Schedule(
-				"8:00am","8:00pm",
-				"8:00am","8:00pm",
-				"8:00am","8:00pm",
-				"8:00am","8:00pm",
-				"8:00am","8:00pm",
-				"8:00am","8:00pm",
-				"8:00am","8:00pm");
-		schedule.setId((long) 2);
+				"08:00","20:00",
+				"","",
+				"","",
+				"","",
+				"","",
+				"","",
+				"","");
+		schedule.setId((long) 1);
+		schedule.setPlaceId((long)2);
 		return schedule;
 	}
 }
