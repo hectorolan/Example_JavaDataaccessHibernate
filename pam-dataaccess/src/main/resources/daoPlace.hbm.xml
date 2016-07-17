@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.olanh.olanh_entities.Place" table="PLACE">
+		<meta attribute="class-description">
+			This class contains the places info
+		</meta>
+		<id name="id" type="long" column="ID">
+			<generator class="identity" />
+		</id>
+		<property name="name" column="NAME" type="string" />
+		<property name="city" column="CITY" type="string" />
+		<property name="category" column="CATEGORY" type="string" />
+		<property name="image" column="IMAGE" type="string" />
+		<property name="type" column="TYPE" type="string" />
+		<property name="phoneNumber" column="PHONENUMBER" type="string" />
+		<property name="dateModified" column="DATEMODIFIED" type="date" />
+	</class>
+</hibernate-mapping>
