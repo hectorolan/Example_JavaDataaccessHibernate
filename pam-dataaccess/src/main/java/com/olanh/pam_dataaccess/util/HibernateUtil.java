@@ -28,11 +28,13 @@ public class HibernateUtil{
 				throw new ExceptionInInitializerError(ex);
 			}
 		}
-		
+
+		System.out.println("Get Hibernate Session");
 		try{
 			hibernateSession = factory.getCurrentSession();
 		}catch (Throwable e){
 			e.printStackTrace();
+			System.out.println("Open new Session");
 			hibernateSession = factory.openSession();
 		}
 		
@@ -68,7 +70,7 @@ public class HibernateUtil{
 			}
 			System.out.println("Connecting with: ");
 			System.out.println(s1);
-			DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+			//DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 			Connection conn = DriverManager.getConnection(s1, "olanhector", "ae010589");
 			DatabaseMetaData dmd = conn.getMetaData();
 			System.out.println("DriverVersion:[" + dmd.getDriverVersion() + "]");
