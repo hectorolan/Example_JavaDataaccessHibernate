@@ -186,7 +186,7 @@ public class DAOMenuItem {
 		MenuItems menuItems = new MenuItems();
 		for (int i = 0; i <= 5; i++){
 			MenuItem menuItem = offlineDBExampleObject();
-			menuItem.setContent("Tomates,Beans,Cheese,Guacamole"+i+"'");
+			menuItem.setContent("Tomates,Beans,Cheese,Guacamole"+i+"");
 			menuItem.addIngrediet("Tomatoe");
 			menuItem.addIngrediet("Beans");
 			menuItem.addIngrediet("Cheese");
